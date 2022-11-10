@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/main.css" rel="stylesheet" />
+    <script>
+      function Dong_ho() {
+        var gio = document.getElementById("gio");
+        var phut = document.getElementById("phut");
+        var giay = document.getElementById("giay");
+        var Gio_hien_tai = new Date().getHours();
+        var Phut_hien_tai = new Date().getMinutes();
+        var Giay_hien_tai = new Date().getSeconds();
+        gio.innerHTML = Gio_hien_tai;
+        phut.innerHTML = Phut_hien_tai;
+        giay.innerHTML = Giay_hien_tai;
+      }
+      var Dem_gio = setInterval(Dong_ho, 1000);
+    </script>
   </head>
-
   <body>
     <!-- <audio autoplay="autopaly">
       <source src="renxi.mp3" type="audio/mp3" />
@@ -22,10 +38,21 @@
     <!-- </div> -->
     <div class="title">
       <!-- EDIT HERE -->
-      <h3 class="STARDUST1">2022</h3>
+      <h3 class="STARDUST1">
+        <span id="gio">00</span>
+        <span>Giờ</span>
+        <span id="phut">00</span>
+        <span>Phút</span>
+        <span id="giay">00</span>
+        <span>Giây</span>
+      </h3>
       <h1 class="STARDUST2">Thành Nhân &amp; Xuân Thu</h1>
       <h3 class="STARDUST3">L O V E <strong>❤</strong> Y O U</h3>
-      <img class="img" src="IMG_1661924600113_1661924843733.jpg" alt="anh_yeu_em" />
+      <img
+        class="img"
+        src="IMG_1661924600113_1661924843733.jpg"
+        alt="anh_yeu_em"
+      />
       <canvas id="pinkboard"></canvas>
     </div>
 
